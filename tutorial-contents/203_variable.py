@@ -14,7 +14,7 @@ update_operation = tf.assign(var, add_operation)
 
 with tf.Session() as sess:
     # once define variables, you have to initialize them by doing this
-    sess.run(tf.global_variables_initializer())
+    sess.run(tf.global_variables_initializer())                 # 改变了初始化的方式 不同于视频
     for _ in range(3):
         sess.run(update_operation)
         print(sess.run(var))
